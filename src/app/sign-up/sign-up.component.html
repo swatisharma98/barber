@@ -1,0 +1,23 @@
+
+  <div style="display: flex;justify-content: center;" class="myRecForm" [ngClass]="formStatus">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <label for="name" style= "font-size: 1.0em;">Name: </label>
+      <input id="name" type="text"placeholder="Your name..." formControlName="name">
+      <small class="test-danger" *ngIf="!profileForm.get('name')?.valid && profileForm.get('name')?.touched">Please enter name</small>
+
+
+      <label for="email" style= "font-size: 1.0em;">Email: </label>
+      <input id="email"  type="text" placeholder="Your email..." formControlName="email">
+      <small class="test-danger" *ngIf="!profileForm.get('email')?.valid && profileForm.get('email')?.touched">Please enter valid email</small>
+
+      <label for="password" style= "font-size: 1.0em;">Password: </label>
+      <input id="password"  type="text" placeholder="Your password ...." formControlName="password">
+      
+      <button type="submit">Submit</button>
+      <!-- <input type="submit" value="Submit"> -->
+      <hr>
+      <button type="submit" style="float:left;width: 200px;background-color:#dd4e41;border: 1px solid #c9453a;color:#fff;font-size: 1.2em;">Google</button>
+      <button type="submit" style="float:right;width: 200px;background-color:#4b66a0;border: 1px solid #3b5998;color:#fff;font-size: 1.2em;">Facebook</button>
+    </form>
+  </div>
+  

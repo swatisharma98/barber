@@ -1,0 +1,79 @@
+<!-- <mat-toolbar class="backcolor">
+ 
+  <a mat-icon-button  aria-label="Example icon-button with heart icon" routerLink="/about"><b>Salon-UC</b></a>
+    <span class="example-spacer"></span>
+    <app-search></app-search>
+    <span class="example-spacer"></span>
+    
+    <a  mat-icon-button  aria-label="Example icon-button with heart icon"  (click)="showLogin()">
+        <b>
+        Login/Sign Up
+    </b>
+    </a>
+  
+    
+    
+ 
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+   -->
+
+  <div >
+    <mat-toolbar class="backcolor">
+     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div style="padding-left: 10px;padding-right: 10px;">
+    <span>Urban Company</span>
+    </div>
+    <span class="example-spacer"></span>
+   <app-search></app-search>
+    <span class="example-spacer"></span>
+    <div style="padding-left: 10px;padding-right: 10px;">
+      <button mat-icon-button  aria-label="Example icon-button with a menu" routerLink="login">
+        Login
+      </button>
+    </div>
+    <div style="padding-left: 10px;padding-right: 10px;">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>person_pin</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>reorder</mat-icon>
+        <span >Orders</span>
+      </button>
+      <button mat-menu-item >
+        <mat-icon>card_giftcard</mat-icon>
+        <span>Gift Card</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>call</mat-icon>
+        <span>Contact Us</span>
+      </button>
+      <button mat-menu-item routerLink="my/profile/edit">
+        <mat-icon>edit</mat-icon>
+        <span>Edit Profile</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>LogOut</span>
+      </button>
+     
+    </mat-menu>
+  </div>
+  <div style="padding-left: 10px;padding-right: 10px;">
+
+    <button mat-icon-button aria-label="Example icon-button with a menu">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </div>
+
+  </mat-toolbar>
+
+  
+</div>
+
+<router-outlet></router-outlet>
+

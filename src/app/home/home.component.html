@@ -1,0 +1,22 @@
+
+<div>
+    <app-slideshow></app-slideshow>
+</div>
+<div style="display: flex;padding-top: 50px;padding-left: 50px;font-size: x-large;font-weight: 500;">
+CATEGORIES TO BAG
+</div>
+<div style="display: flex;padding-top: 20px;justify-content: center;">
+    
+    <div *ngFor="let scard of scards;" style="padding-left: 0.5rem;padding-right: 0.5rem; padding-bottom: 0.5rem;">
+    <app-small-card [parent] = "scard" ></app-small-card>
+    </div>
+</div>
+<div style="display: flex;padding-top: 50px;padding-left: 50px;font-size: x-large;font-weight: 500;">
+    TOP PICKS
+    </div>
+<div style="padding-top: 20px;padding-left: 30px;">
+    <div *ngFor="let card of cards;" style="padding-left: 0.5rem;padding-right: 0.5rem;padding-bottom: 0.5rem;">
+        <app-shop-card></app-shop-card>
+    </div>
+   
+    </div>

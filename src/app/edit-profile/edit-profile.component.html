@@ -1,0 +1,62 @@
+<div class="background-style">
+    <div style="border-bottom: 1px solid #d4d5d9;font-size: 12px;">
+        <div class="font-size: 18px;font-weight: 800;">
+            <p style="font-size: 18px;font-weight: 500;padding: 1px;">Account</p>
+        </div>
+         <div style="font-size: 14px;"> <p>{{name}}</p></div>  
+    </div>
+    <div style="margin-left: 250px;margin-right: 50px;">
+    <div style="padding: 15px;">
+    <div class="myRecForm" [ngClass]="formStatus">
+        <div>
+        
+        <!-- <p style="font-size: 18px;font-weight: 500;float: left;">Edit Details</p>
+       -->
+       <form >
+        <label for="mobile" style= "font-size: 1.0em;">Mobile Number: </label>
+        <input id="mobile" type="text"placeholder="Your number..." formControlName="mobile">
+
+        <label for="name" style= "font-size: 1.0em;">Full Name: </label>
+        <input id="name" type="text"placeholder="Your name..." formControlName="name">
+
+        <label for="email" style= "font-size: 1.0em;">Email: </label>
+        <input id="email"  type="text" placeholder="Your email..." formControlName="email">
+
+        <label for="birthday" style= "font-size: 1.0em;">Birthday: </label>
+        <input id="birthday"  type="text" placeholder="Your birthday..." formControlName="birthday">
+
+        <label for="location" style= "font-size: 1.0em;">Location: </label>
+        <input id="location"  type="text" placeholder="Your location..." formControlName="location">
+
+        <label for="mobile" style= "font-size: 1.0em;font-weight: 500;">Alternate mobile details: </label>
+        <input id="mobile"  type="text" placeholder="Your number..." formControlName="mobile">
+
+        <button class ="submit" type="submit">SAVE DETAILS</button>
+        <button class ="password" type="submit">CHANGE PASSWORD</button>
+
+       </form>
+        <!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <label for="name" style= "font-size: 1.0em;">Name: </label>
+          <input id="name" type="text"placeholder="Your name..." formControlName="name">
+          <small class="test-danger" *ngIf="!profileForm.get('name')?.valid && profileForm.get('name')?.touched">Please enter name</small>
+    
+    
+          <label for="email" style= "font-size: 1.0em;">Email: </label>
+          <input id="email"  type="text" placeholder="Your email..." formControlName="email">
+          <small class="test-danger" *ngIf="!profileForm.get('email')?.valid && profileForm.get('email')?.touched">Please enter valid email</small>
+    
+          <label for="password" style= "font-size: 1.0em;">Password: </label>
+          <input id="password"  type="text" placeholder="Your password ...." formControlName="password">
+          
+          <button type="submit">Submit</button>
+          
+          <hr>
+          <button type="submit" style="float:left;width: 200px;background-color:#dd4e41;border: 1px solid #c9453a;color:#fff;font-size: 1.2em;">Google</button>
+          <button type="submit" style="float:right;width: 200px;background-color:#4b66a0;border: 1px solid #3b5998;color:#fff;font-size: 1.2em;">Facebook</button>
+        </form> -->
+        </div>
+      </div>
+    </div> 
+</div>
+    
+</div>
