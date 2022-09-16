@@ -17,6 +17,7 @@ export class EditProfileComponent implements OnInit {
   }
 
   name= 'Swati';
+  url="../../../assets/image/imagesss.jpg";
 
   
   formStatus:any;
@@ -30,6 +31,16 @@ export class EditProfileComponent implements OnInit {
     console.log('this',this.profileForm);
     console.log(this.profileForm.get('email')?.valid);
     this.profileForm.reset();
+  }
+
+  onSelectFile(e:any){
+  if(e.target.files){
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onload=(event:any)=>{
+    this.url = event.target.result;
+    }
+  }
   }
 
   validate(control:FormControl){

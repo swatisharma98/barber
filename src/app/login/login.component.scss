@@ -1,14 +1,122 @@
-.example-spacer {
-    flex: 1 1 auto;
-  }
-  .mat-tab-group {
-    margin-bottom: 48px;
-  }
+// .example-spacer {
+//     flex: 1 1 auto;
+//   }
+//   .mat-tab-group {
+//     margin-bottom: 48px;
+//   }
 
-  .example-card {
-    max-width: 1000px;
+//   .example-card {
+//     max-width: 1000px;
     
-    border: none;
-    outline: none;
+//     border: none;
+//     outline: none;
     
-  }
+//   }
+
+
+.background-style{
+  // background-color: #F5F5F5;
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 10px;
+}
+
+// .example-container .mat-form-field + .mat-form-field {
+//     margin-left: 8px;
+//   }
+
+.test-danger{
+  color: red;
+  float: right;
+}
+
+input[type=text], select {
+width: 100%;
+padding: 12px 10px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+// input[type=submit] {
+//   width: 100%;
+//   background-color: #4CAF50;
+//   color: white;
+//   padding: 12px 10px;
+//   margin: 8px 0;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+// }
+
+// input[type=submit]:hover {
+//   background-color: #45a049;
+// }
+
+.submit{
+width: 100%;
+background-color: #ff3f6c;
+color: white;
+padding: 12px 10px;
+font-size: 1.0em;
+font-weight: 500;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+.submit:hover {
+background-color: #ff3f6c;
+}
+.password{
+width: 100%;
+background-color: white;
+color: black;
+padding: 12px 10px;
+font-size: 1.0em;
+font-weight: 500;
+margin: 8px 0;
+border: 1px solid #d4d5d9;
+border-radius: 4px;
+cursor: pointer;
+}
+.password:hover {
+background-color: white;
+}
+
+.myRecForm{
+
+background-color:white;
+padding-top: 50px;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 50px;
+border: 1px solid #F5F5F5;
+display: flex;
+justify-content: center;
+box-shadow: 0 0 60px #F5F5F5 !important;
+}
+
+.myRecForm.INVALID{
+
+border: 1px solid red;
+box-shadow: 0 0 31px rgba(255, 0 , 0 ,0.2)  !important;
+
+}
+
+.myRecForm.PENDING{
+
+border: 1px solid #f6de0b;
+box-shadow: 0 0 31px rgba(255, 235 , 59 ,0.7) !important;
+
+}
+
+.myRecForm.VALID{
+
+border: 1px solid #2ee536;
+box-shadow: 0 0 31px rgba(78, 233 , 84 ,0.61) !important;
+
+}

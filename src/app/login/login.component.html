@@ -1,13 +1,46 @@
+<div class="background-style">
+    <div style="margin-left: 250px;margin-right: 250px;">
+    <div style="padding: 15px;">
+    <div class="myRecForm" [ngClass]="formStatus">
+        <div *ngIf="val; else signup" >
+            <p style="font-size: 20px;font-weight:500;justify-content: center;">LOGIN</p>
+            <form >       
+                <label for="email" style= "font-size: 1.0em;">Email: </label>
+                <input id="email"  type="text" placeholder="Your email..." formControlName="email">
 
-<div >
-<p style="justify-content: center;display: flex;font-size: 1.3em;"><b>Please Login to Continue</b></p>
-<br>
-<mat-tab-group animationDuration="1ms">
-    <mat-tab label="Login" style="background-color:white;font-weight: bold;font-size: 1.0em;"> <app-login-form></app-login-form></mat-tab>
-    <mat-tab label="SignUp" style="background-color:white;font-weight: bold;font-size: 1.0em;">
-        <app-sign-up></app-sign-up>
-    </mat-tab>
-</mat-tab-group>
+                <label for="password" style= "font-size: 1.0em;">Password: </label>
+                <input id="password"  type="text" placeholder="Your password..." formControlName="password">
+        
+                <button class ="submit" type="submit" >LOGIN IN</button>
 
+            </form>
+            <hr>
+            <button class="submit" (click)="onSignUp(false)">CREATE NEW ACCOUNT</button>
+        </div>
+        <ng-template #signup>
+        <div >
+        <form >       
+        <label for="name" style= "font-size: 1.0em;">Full Name: </label>
+        <input id="name" type="text"placeholder="Your name..." formControlName="name">
 
+        <label for="mobile" style= "font-size: 1.0em;">Mobile Number: </label>
+        <input id="mobile" type="text"placeholder="Your number..." formControlName="mobile">
+
+        <label for="email" style= "font-size: 1.0em;">Email: </label>
+        <input id="email"  type="text" placeholder="Your email..." formControlName="email">
+
+        <label for="birthday" style= "font-size: 1.0em;">Birthday: </label>
+        <input id="birthday"  type="text" placeholder="Your birthday..." formControlName="birthday">
+
+        <label for="password" style= "font-size: 1.0em;">Password: </label>
+        <input id="password"  type="text" placeholder="Your password..." formControlName="password">
+
+        <button class ="submit" type="submit" (click)="onSubmit('')">SIGN UP</button>
+       </form>
+        </div>
+    </ng-template>
+      </div>
+    </div> 
+</div>
+    
 </div>

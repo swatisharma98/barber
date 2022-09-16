@@ -39,6 +39,7 @@ import { HomeComponent } from './home/home.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServiceComponent } from './service/service.component';
 
 
 
@@ -61,7 +62,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     EditProfileComponent,
     FormComponent,
-    FooterComponent
+    FooterComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
