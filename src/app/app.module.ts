@@ -40,6 +40,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServiceComponent } from './service/service.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -63,7 +64,8 @@ import { ServiceComponent } from './service/service.component';
     EditProfileComponent,
     FormComponent,
     FooterComponent,
-    ServiceComponent
+    ServiceComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
