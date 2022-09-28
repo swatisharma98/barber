@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
+import { Shop } from '../shared/interface/shop.interface';
+import { ShopDataSource } from './shopDataSource';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public shopDataSource:ShopDataSource;
+  public shopDetails:Shop[]=[];
+
+  constructor(private readonly shopService: AppService) {
+    this.shopDataSource = new ShopDataSource(shopService);
+   }
 
   ngOnInit(): void {
+    this.loadData();
   }
 
+
+  private loadData(){
+    this.shopDataSource.loadShopData();
+  }
+  
   title = 'barber';
 
 
@@ -52,80 +66,9 @@ export class HomeComponent implements OnInit {
       "url":"../../../assets/image/cheese.jpg"
     }
     
-    // },
-    // {
-    //   "name":"Cheese Pizza",
-    //   "Price":"567",
-    //   "Discount":"60%",
-    //   "newPrice":"267",
-    //   "url":"../../../assets/images/paneer.jpg"
-    // },
-    // {
-    //   "name":"Cheese Pizza",
-    //   "Price":"567",
-    //   "Discount":"60%",
-    //   "newPrice":"267",
-    //   "url":"../../../assets/images/paneer.jpg"
-    // },
-    // {
-    //   "name":"Cheese Pizza",
-    //   "Price":"567",
-    //   "Discount":"60%",
-    //   "newPrice":"267",
-    //   "url":"../../../assets/images/paneer.jpg"
-    // },
-    // {
-    //   "name":"Cheese Pizza",
-    //   "Price":"567",
-    //   "Discount":"60%",
-    //   "newPrice":"267",
-    //   "url":"../../../assets/images/paneer.jpg"
-    // }
   ];
 
-  public scards:any=[
-    {
-      "name":"Bleach",
-      "url":"../../../assets/image/bleach.jpg"
-    },
-    {
-      "name":"MakeUp",
-      "url":"../../../assets/image/makeup.jpg"
-    },
-    {
-      "name":"Manicure",
-      "url":"../../../assets/image/manicure.jpg"
-    },
-    {
-      "name":"Massage",
-      "url":"../../../assets/image/images.jpg"
-    },
-    {
-      "name":"Hair Style",
-      "url":"../../../assets/image/parlour.jpg"
-    },
-    {
-      "name":"Manicure",
-      "url":"../../../assets/image/manicure.jpg"
-    },
-    {
-      "name":"Massage",
-      "url":"../../../assets/image/images.jpg"
-    },
-    {
-      "name":"Hair Style",
-      "url":"../../../assets/image/parlour.jpg"
-    },
-    {
-      "name":"Massage",
-      "url":"../../../assets/image/images.jpg"
-    },
-    {
-      "name":"Hair Style",
-      "url":"../../../assets/image/parlour.jpg"
-    }
-  ]
-
+  
   showFiller = false;
 
 }

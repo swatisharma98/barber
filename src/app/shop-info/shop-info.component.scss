@@ -1,0 +1,17 @@
+.mat-tab-label{
+    color:rgb(28, 28, 28);
+    min-width: 25px !important;
+    padding: 5px;
+    font-size: 1.1rem;
+    background-color:transparent;
+    font-weight: 500;
+  }
+
+  .mat-tab-label:active{
+    min-width: 25px !important;
+    padding: 5px;
+    background-color:transparent;
+    color:rgb(28, 28, 28);
+    font-size: 1.1rem;
+    font-weight: 600;
+}

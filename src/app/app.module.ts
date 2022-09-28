@@ -41,6 +41,13 @@ import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServiceComponent } from './service/service.component';
 import { CartComponent } from './cart/cart.component';
+import { AppService } from './app.service';
+import {HttpClientModule} from '@angular/common/http';
+import { ShopInfoComponent } from './shop-info/shop-info.component';
+import { CustomCardComponent } from './custom-card/custom-card.component';
+import { MatExpansionModule} from '@angular/material/expansion';
+import { OverviewComponent } from './overview/overview.component';
+import { ReviewCardComponent } from './review-card/review-card.component';
 
 
 
@@ -65,7 +72,11 @@ import { CartComponent } from './cart/cart.component';
     FormComponent,
     FooterComponent,
     ServiceComponent,
-    CartComponent
+    CartComponent,
+    ShopInfoComponent,
+    CustomCardComponent,
+    OverviewComponent,
+    ReviewCardComponent
   ],
   imports: [
     BrowserModule,
@@ -90,11 +101,12 @@ import { CartComponent } from './cart/cart.component';
     MatSidenavModule ,
     MatTabsModule,
     ReactiveFormsModule,
-    MatMenuModule
-    
+    MatMenuModule,
+    HttpClientModule,
+    MatExpansionModule
 
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

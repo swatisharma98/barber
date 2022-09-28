@@ -1,6 +1,11 @@
-<div style="padding-top: 20px;padding-left:200px;justify-content: center;">
-    <div *ngFor="let card of cards;" style="padding-left: 0.5rem;padding-right: 0.5rem;padding-bottom: 0.5rem;">
-        <app-shop-card></app-shop-card>
+<!-- 
+<div *ngIf="currentVal == false; else elseBlock" style="padding-top: 20px;padding-left:200px;justify-content: center;">
+    <div *ngFor="let card of shopDataSource.filterDetails;" style="padding-left: 0.5rem;padding-right: 0.5rem;padding-bottom: 0.5rem;cursor: pointer;">
+        <app-shop-card [parent] = card (childEvent) = "onMessageAdded($event)"></app-shop-card>
     </div>
+</div> -->
+<!-- <ng-template #elseBlock> -->
+    <app-shop-info (childEvent) = "onValueChanged()"></app-shop-info>
+<!-- </ng-template> -->
 
-</div>
+
